@@ -31,13 +31,13 @@
             </tr>
         </table>
 
-        <h3 style="text-align:center">
+        <h3>
             Current Path:
-            <small id="currentDirectoryHeading" style="color:#888844">{{currentDirectory}}</small>
+            <small id="currentDirectoryHeading">{{currentDirectory}}</small>
         </h3>
 
         <div id="Content">
-            <div style="position:relative; top:10px">
+            <div >
 
                 <a href="" id="backButton">{{backButton}}</a>
                 <div data-ng-repeat="directory in directories">
@@ -51,7 +51,7 @@
         </div>
 
         <div id="showButton">
-            <button id="showNumbers" data-ng-click="GetNumbersOfFiles(currentDirectory+directory.path)">Show numbers of files</button>
+            <button id="showNumbers" data-ng-click="!IsClickEnable||GetNumbersOfFiles(currentDirectory+directory.path)">Show numbers of files</button>
         </div>
     </div>
 

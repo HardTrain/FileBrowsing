@@ -10,6 +10,16 @@ body {
     height: 700px;
 }
 
+a {
+    position: relative;
+    left: 10px;
+    color: #0099e6;
+}
+
+h3 {
+    text-align: center;
+}
+
 table.center, th, td {
     text-align: center;
     margin-left: auto;
@@ -27,13 +37,15 @@ th {
 }
 
 #Content {
+    position: relative;
+    top: 10px;
+    height: 400px;
+    width: 600px;
     border: 1px solid gray;
     margin-left: auto;
     margin-right: auto;
     overflow-y: auto;
     overflow-x: hidden;
-    height: 400px;
-    width: 600px;
 }
 
 #showButton {
@@ -42,8 +54,6 @@ th {
     top: 10px;
 }
 
-a {
-    position: relative;
-    left: 10px;
-    color: #0099e6;
+#currentDirectoryHeading {
+    color: #888844;
 }
