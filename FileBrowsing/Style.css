@@ -1,0 +1,49 @@
+﻿html {
+    background-color: white;
+}
+
+
+body {
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: #f2f2f2;
+    height: 700px;
+}
+
+table.center, th, td {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 40px;
+    border: 3px solid #888844;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #888844;
+    color: white;
+    font-size: 20px;
+}
+
+#Content {
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 400px;
+    width: 600px;
+}
+
+#showButton {
+    position: relative;
+    text-align: center;
+    top: 10px;
+}
+
+a {
+    position: relative;
+    left: 10px;
+    color: #0099e6;
+}

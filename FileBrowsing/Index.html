@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+
+    <link href="Style.css" rel="stylesheet" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/APIScripts/Module.js"></script>
+    <script src="Scripts/APIScripts/Service.js"></script>
+    <script src="Scripts/APIScripts/Controller.js"></script>
+</head>
+
+<body data-ng-app="APIModule">
+
+    <div id="fileBrowsing" ng-controller="APIController">
+
+        <table class="center">
+            <tr>
+                <th>Less 10Mb</th>
+                <th>10Mb-50Mb</th>
+                <th>More 100Mb</th>
+            </tr>
+            <tr>
+                <td>{{LessTenMb}}</td>
+                <td>{{TenFiftyMb}}</td>
+                <td>{{MoreOneHundredMb}}</td>
+            </tr>
+        </table>
+
+        <h3 style="text-align:center">
+            Current Path:
+            <small id="currentDirectoryHeading" style="color:#888844">{{currentDirectory}}</small>
+        </h3>
+
+        <div id="Content">
+            <div style="position:relative; top:10px">
+
+                <a href="" id="backButton">{{backButton}}</a>
+                <div data-ng-repeat="directory in directories">
+                    <a href="" data-ng-click="!IsClickEnable||GetDirectoriesAndFiles(currentDirectory+directory.path)">{{directory.path}}</a>
+                </div>
+
+                <div data-ng-repeat="file in files">
+                    <a>{{file.path}}</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="showButton">
+            <button id="showNumbers" data-ng-click="GetNumbersOfFiles(currentDirectory+directory.path)">Show numbers of files</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
